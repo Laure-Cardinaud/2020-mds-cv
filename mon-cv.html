@@ -26,12 +26,16 @@
 
         h2 {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.6em;
             color: #70cbc6;
         }
 
+        h3 {
+            font-size: 1.6em !important;
+        }
+
         #photo-cv {
-            width: 300px;
+            width: 16em;
         }
 
         .coordonnees {
@@ -64,8 +68,8 @@
 
         .button {
             display: block;
-            width: 190px;
-            height: 60px;
+            width: 12em;
+            height: 4em;
             line-height: 60px;
             background: #70cbc6;
             color: #1f1f1f;
@@ -73,7 +77,19 @@
             text-decoration: none;
             font-weight: bold;
             margin: 10px 0px 10px 0px;
+            transition: opacity .2s ease-out;
+            -moz-transition: opacity .2s ease-out;
+            -webkit-transition: opacity .2s ease-out;
+            -o-transition: opacity .2s ease-out;
 
+        }
+
+        .button:hover {
+            opacity: 0.4;
+            transition: opacity .2s ease-out;
+            -moz-transition: opacity .2s ease-out;
+            -webkit-transition: opacity .2s ease-out;
+            -o-transition: opacity .2s ease-out;
         }
 
         hr {
@@ -97,6 +113,9 @@
 
 
         /* GRID CSS */
+
+
+        /* grille principale */
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -104,6 +123,10 @@
             grid-gap: 10px;
         }
 
+        /* fin grille principale */
+
+
+        /********************************************************************************************** CSS bloc compétences */
         .bloc-competences {
             grid-column: 1/3;
             grid-row: 1/2;
@@ -117,11 +140,16 @@
             width: 120px;
         }
 
-        .competences{
+        .competences {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             text-align: center;
+        }
+
+        .competences p span {
+            font-size: 1em;
+            font-weight: bold;
         }
 
         .design,
@@ -131,29 +159,31 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 50px;
+            padding: 2.5em;
             margin: 10px;
         }
 
-        .outils {
+        /********************************************** fin CSS bloc compétences */
+
+        .bloc-outils {
             border: #70cbc6 2px solid;
             grid-column: 1/2;
             grid-row: 2/3;
         }
 
-        .loisirs {
+        .bloc-loisirs {
             border: #70cbc6 2px solid;
             grid-column: 1/2;
             grid-row: 3/4;
         }
 
-        .parcours {
+        .bloc-parcours {
             border: #70cbc6 2px solid;
             grid-column: 2/3;
             grid-row: 2/4;
         }
 
-        .footer {
+        .bloc-footer {
             border: #70cbc6 2px solid;
             grid-column: 1/3;
             grid-row: 4/5;
@@ -165,7 +195,7 @@
 
 <body>
 
-
+    <!---------------------------------------------------------------------------------------------------- HTML header -->
 
     <div class="bloc-pres">
         <div class="coordonnees" itemscope itemtype="http://schema.org/Person">
@@ -203,14 +233,12 @@
 
 
 
-    <!-- GRID HTML -->
+    <!-------------------------------------------------------------------------------------------- HTML grille principale -->
     <div class="container">
 
 
 
-
-
-
+        <!------------------------------------------------------------------------------------ HTML bloc compétences -->
         <div class="bloc-competences">
 
             <div class="titre-bloc">
@@ -221,14 +249,14 @@
                 <div class="design">
                     <img src="img/pencil.png" alt="Icone design graphique">
                     <h3>DESIGN GRAPHIQUE</h3>
-                    <p>Création d’identités graphiques, logos, visuels et documents print et web<br>
+                    <p><span>Création d’identités graphiques, logos, visuels et documents print et web</span><br><br>
                         Typographie • dessin vectoriel • retouche photo • motion design</p>
                 </div>
 
                 <div class="webdesign">
                     <img src="img/monitor.png" alt="Icone webdesign">
                     <h3>WEBDESIGN</h3>
-                    <p>UX/UI design • Design d’interfaces web • Responsive design • Ergonomie<br>
+                    <p><span>UX/UI design • Design d’interfaces web • Responsive design • Ergonomie</span><br><br>
                         Intégration HMTL5 / CSS3
                         CMS WordPress, Prestashop et Magento</p>
                 </div>
@@ -236,7 +264,7 @@
                 <div class="webmarketing">
                     <img src="img/target.png" alt="Icone webmarketing">
                     <h3>WEBMARKETING</h3>
-                    <p>Création de d'emailings, bannières et visuels pour les réseaux sociaux<br>
+                    <p><span>Création de d'emailings, bannières et visuels pour les réseaux sociaux</span><br><br>
                         SEO/SEA • Campagnes Google Ads
                         Stratégie de communication</p>
                 </div>
@@ -249,10 +277,10 @@
 
 
 
-        <div class="outils">Outils</div>
-        <div class="loisirs">Loisirs</div>
-        <div class="parcours">Parcours</div>
-        <div class="footer">Footer</div>
+        <div class="bloc-outils">Outils</div>
+        <div class="bloc-loisirs">Loisirs</div>
+        <div class="bloc-parcours">Parcours</div>
+        <div class="bloc-footer">Footer</div>
     </div>
 
 
