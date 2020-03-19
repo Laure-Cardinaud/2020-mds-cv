@@ -11,9 +11,9 @@
         }
 
         body {
-            background-color: white;
+            background-color: #1f1f1f;
             font-family: "futura-light";
-            color: #555555;
+            color: #dedede;
             padding: 100px;
             line-height: 1.8em;
         }
@@ -21,14 +21,19 @@
         h1 {
             text-align: left;
             font-size: 3em;
+            color: #70cbc6;
         }
 
         #photo-cv {
-            width: 160px;
+            width: 300px;
         }
 
         .coordonnees {
             text-align: left;
+        }
+
+        .email {
+            color: #70cbc6;
         }
 
         .metier {
@@ -40,12 +45,12 @@
             margin-bottom: 4em;
         }
 
-        .presentation {
+        /* .presentation {
             padding: 3em 0em 3em 0em;
             text-align: center;
             width: 50em;
             margin: auto;
-        }
+        } */
 
         li span {
             font-weight: bold;
@@ -53,19 +58,21 @@
 
         .button {
             display: block;
-            width: 160px;
+            width: 190px;
             height: 60px;
             line-height: 60px;
-            background: crimson;
-            color: #FFF;
+            background: #70cbc6;
+            color: #1f1f1f;
             text-align: center;
             text-decoration: none;
+            font-weight: bold;
             margin: 10px 0px 10px 0px;
 
         }
 
         hr {
-            background-color: crimson;
+            background-color: #70cbc6;
+            border: 0px;
             height: 2px;
         }
 
@@ -73,11 +80,68 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            margin-bottom: 30px;
 
         }
 
-        li{
+        li {
             list-style-type: circle;
+        }
+
+
+
+        /* GRID CSS */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 5fr 5fr 5fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .competences {
+            grid-column: 1/3;
+            grid-row: 1/2;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+
+        .competences img  {
+            width: 120px;
+        }
+
+        .design, .webdesign, .webmarketing{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            margin:10px;
+            border: #70cbc6 2px solid;
+        }
+
+        .outils {
+            border: #70cbc6 2px solid;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+
+        .loisirs {
+            border: #70cbc6 2px solid;
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+
+        .parcours {
+            border: #70cbc6 2px solid;
+            grid-column: 2/3;
+            grid-row: 2/4;
+        }
+
+        .footer {
+            border: #70cbc6 2px solid;
+            grid-column: 1/3;
+            grid-row: 4/5;
         }
     </style>
 
@@ -96,30 +160,83 @@
                 <span itemprop="postalCode">44100</span>
                 <span itemprop="addressLocality">Nantes</span>
             </div>
-            <a href="mailto:laure.cardinaud@gmail.com" itemprop="email">
+            <a href="mailto:laure.cardinaud@gmail.com" itemprop="email" class="email">
                 laure.cardinaud@gmail.com</a>
-            <div><a class="button" href="https://laurecardinaud.com/" target="blank" itemprop="url">Mon portfolio</a>
+            <div><a class="button" href="https://laurecardinaud.com/" target="blank" itemprop="url">Visitez mon
+                    portfolio</a>
             </div>
         </div>
 
 
-        <a href="img/photo-laure2.png" target="blank"><img id="photo-cv" src="img/photo-laure2.png" itemprop="image"
-                alt="Photo de Laure"/></a>
+        <a href="img/photo-laure.png" target="blank"><img id="photo-cv" src="img/photo-laure.png" itemprop="image"
+                alt="Photo de Laure" /></a>
 
     </div>
 
 
 
-    <P class="presentation">Costumière de spectacle dans une vie antérieure, je suis passionnée par la création au sens
-        large, j'aime
-        m'imprégner des nouveautés et différents courants créatifs, que ce soit pour le web, le graphisme, les arts
-        textiles...<br>
-        À l'écoute et créative, passionnée et déterminée dans tout ce que j'entreprends, je sais m'adapter avec sourire
-        et bonne humeur aux missions que l'on me confie.
-    </P>
+    <!-- <p class="presentation">Je m’appelle Laure et je suis webdesigner à Nantes.
+        Costumière de spectacle dans une vie antérieure, je suis passionnée par le web et par la création au sens large,
+        j’aime m’imprégner des nouveautés et différents courants créatifs, que ce soit pour le web, le graphisme, les
+        arts textiles…<br>
+        <br><b>• Mes appétences :</b> Graphisme, typographie, design UI/UX, motion design…
+        <br><b>• Mes atouts :</b> Créativité, curiosité, organisation, empathie !<br>
+        <br><b>À vos côtés pour une prochaine aventure digitale ?</b>
+    </p> -->
 
 
-    <h2>COMPÉTENCES</h2>
+
+
+
+    <!-- GRID HTML -->
+    <div class="container">
+        <div class="competences">
+            
+            <div class="design">
+                <img src="img/pencil.png" alt="Icone design graphique">
+                <h3>DESIGN GRAPHIQUE</h3>
+                <p>Création d’identités graphiques, logos, visuels et documents print et web.
+                    Typographie • dessin vectoriel • retouche photo • motion design</p>
+            </div>
+
+            <div class="webdesign">
+                <img src="img/monitor.png" alt="Icone webdesign">
+                <h3>WEBDESIGN</h3>
+                <p>UX/UI design • Design d’interfaces web • Responsive design • Ergonomie
+                    Intégration HMTL5 / CSS3
+                    CMS WordPress, Prestashop et Magento</p>
+            </div>
+
+            <div class="webmarketing">
+                <img src="img/target.png" alt="Icone webmarketing">
+                <h3>WEBMARKETING</h3>
+                <p>Création de d'emailings, bannières et visuels pour les réseaux sociaux
+                    SEO/SEA • Campagnes Google Ads
+                    Stratégie de communication</p>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="outils">Outils</div>
+        <div class="loisirs">Loisirs</div>
+        <div class="parcours">Parcours</div>
+        <div class="footer">Footer</div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- <h2>COMPÉTENCES</h2>
     <hr>
 
     <ul>
@@ -164,7 +281,7 @@
         </li>
         <li>
             <span>De 2009 à 2017</span> : Auxiliaire Vétérinaire dans diverses structures vétérinaires <i>(Rennes et
-            Nantes)</i>
+                Nantes)</i>
         </li>
         <li>
             <span>De 2005 à 2009</span> : Agent d'accueil - OPÉRA DE RENNES <i>(Rennes)</i>
@@ -189,7 +306,7 @@
         <li>
             <span>2002</span> : Prépa Arts Appliqués - LYCÉE ADOLPHE CHÉRIOUX<i> (Paris)</i>
         </li>
-    </ul>
+    </ul> -->
 
 
 </body>
