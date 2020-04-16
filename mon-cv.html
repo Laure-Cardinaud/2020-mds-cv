@@ -165,11 +165,58 @@
 
         /********************************************** fin CSS bloc compétences */
 
+
+        /********************************************************************************************** CSS bloc outils */
+
+        
+        
         .bloc-outils {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             border: #70cbc6 2px solid;
             grid-column: 1/2;
             grid-row: 2/3;
+            padding: 50px;
         }
+        
+        .bloc-outil {
+            margin: 4vh;
+        }
+
+        .outils-bloc {
+            margin: auto;
+        }
+
+        .outil {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        progress {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25vw;
+            height: 2vh;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #727272;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: #70cbc6;
+        }
+
+        progress::-moz-progress-bar {
+            color: #70cbc6;
+        }
+
+
+
+        /********************************************** fin CSS bloc outils */
+
+     
 
         .bloc-loisirs {
             border: #70cbc6 2px solid;
@@ -274,10 +321,58 @@
 
 
 
+        <!------------------------------------------------------------------------------------ HTML bloc outils -->
+
+
+        <div class="bloc-outils">
+
+            <h2>OUTILS</h2>
+
+            <div class="outils-bloc">
+                <div class="bloc-outil">
+                    <div class="outil">Photoshop / Illustrator</div>
+                    <div class="jauge">
+                        <progress class="avancement" value="85" max="100">
+                            <div pseudo="-webkit-progress-inner-element">
+                                <div pseudo="-webkit-progress-bar">
+                                    <div pseudo="-webkit-progress-value"></div>
+                                </div>
+                            </div>
+                        </progress>
+
+                    </div>
+                </div>
+
+                <div class="bloc-outil">
+                    <div class="outil">InDesign</div>
+                    <div class="jauge"><progress class="avancement" value="75" max="100"></progress></div>
+                </div>
+
+                <div class="bloc-outil">
+                    <div class="outil">Adobe XD</div>
+                    <div class="jauge"><progress class="avancement" value="85" max="100"></progress></div>
+                </div>
+
+                <div class="bloc-outil">
+                    <div class="outil">After Effects</div>
+                    <div class="jauge"><progress class="avancement" value="60" max="100"></progress></div>
+                </div>
+
+                <div class="bloc-outil">
+                    <div class="outil">Wordpress / Prestashop</div>
+                    <div class="jauge"><progress class="avancement" value="80" max="100"></progress></div>
+                </div>
+
+                <div class="bloc-outil">
+                    <div class="outil">HTML / CSS / JS</div>
+                    <div class="jauge"><progress class="avancement" value="60" max="100"></progress></div>
+                </div>
+            </div>
+
+        </div>
 
 
 
-        <div class="bloc-outils">Outils</div>
         <div class="bloc-loisirs">Loisirs</div>
         <div class="bloc-parcours">Parcours</div>
         <div class="bloc-footer">Footer</div>
