@@ -53,7 +53,7 @@
             font-weight: bold;
         }
 
-        ul {
+        .ul-parcours {
             margin-bottom: 4em;
         }
 
@@ -121,7 +121,7 @@
         .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 4fr 5fr 5fr 1fr;
+            /* grid-template-rows: 4fr 5fr 5fr 1fr; */
             grid-gap: 10px;
         }
 
@@ -259,6 +259,57 @@
         img.logo-ese {
             width: 5vw;
         }
+
+
+
+        /********************************************************************************************** CSS bloc Loisirs */
+
+
+        .loisirs {
+            margin: 5vh;
+        }
+
+        .bloc-loisirs {
+            padding: 5vh;
+        }
+
+        .loisirs-bloc {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 8vh;
+        }
+
+        .divloisirs {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bloc-milia {
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+        }
+
+        .milia-suspiria {
+            padding: 5vh 5vh 0vh 5vh;
+        }
+
+        .reseaux-milia {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .reseau {
+            padding-right: 3vh;
+        }
+
+        .icone-rs {
+            padding-right: 2vh;
+        }
+
+        .milia h3 {}
 
 
 
@@ -450,11 +501,79 @@
 
 
 
-
+        <!------------------------------------------------------------------------------------ HTML bloc Loisirs -->
 
         <div class="bloc-loisirs">
-            <h2>INTÉRETS & LOISIRS</h2>
+            <h2>INTÉRÊTS & LOISIRS</h2>
+
+            <div class="milia-suspiria">
+                <h3 class="milia">Milia Suspiria</h3>
+                <p>Bijoux, curiosités, et petites diableries</p>
+                <div class="bloc-milia">
+                    <img class="logo-milia" src="img/logo-milia.png" alt="Logo Milia Suspiria">
+                    <ul>
+                        <li>Création de bijoux et petits objets de décoration</li>
+                        <li>Identité visuelle et logo</li>
+                        <li>E-commerce, réseaux sociaux</li>
+                    </ul>
+                </div>
+                <div class="reseaux-milia">
+                    <a class="icone-rs" href="https://www.etsy.com/fr/shop/MiliaSuspiria" target="_blank">
+                        <img src="img/etsy.png" alt="icone Etsy" /></a>
+                    <p class="reseau">www.etsy.com/fr/shop/MiliaSuspiria</p>
+                    <a class="icone-rs" href="https://www.facebook.com/MiliaSuspiria/" target="_blank">
+                        <img src="img/facebook.png" alt="icone Facebook" /></a>
+                    <p class="reseau">@miliasuspiria</p>
+                    <a class="icone-rs" href="https://www.instagram.com/miliasuspiria/?hl=fr" target="_blank">
+                        <img src="img/instagram2.png" alt="icone Instagram" /></a>
+                    <p class="reseau">@miliasuspiria</p>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="loisirs">
+
+                <div class="loisirs-bloc">
+                    <div class="divloisirs">
+                        <img class="icone-loisirs" src="img/creation.png" alt="icône graphisme">
+                        <div class="text-loisirs">Graphisme</div>
+                    </div>
+                    <div class="divloisirs">
+                        <img class="icone-loisirs" src="img/musique.png" alt="icône musique">
+                        <div class="text-loisirs">Musique</div>
+                    </div>
+                    <div class="divloisirs">
+                        <img class="icone-loisirs" src="img/cinema.png" alt="icône cinéma">
+                        <div class="text-loisirs">Cinéma</div>
+                    </div>
+
+                </div>
+                <div class="loisirs-bloc">
+                    <div class="divloisirs">
+                        <img class="icone-loisirs" src="img/voyages.png" alt="icône voyages">
+                        <div class="text-loisirs">Voyages</div>
+                    </div>
+                    <div class="divloisirs">
+                        <img class="icone-loisirs" src="img/nature.png" alt="icône nature">
+                        <div class="text-loisirs">Nature</div>
+                    </div>
+                    <div class="divloisirs">
+                        <img class="icone-loisirs" src="img/couture.png" alt="icône couture">
+                        <div class="text-loisirs">Couture</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="milia"></div>
         </div>
+
 
         <!------------------------------------------------------------------------------------ HTML bloc Parcours -->
 
@@ -474,7 +593,7 @@
                                 (Nantes)</span></p>
                     </div>
                     <div class="detail-mission">
-                        <ul>
+                        <ul class="ul-parcours">
                             <li>UI/UX design, ergonomie, maquettage, motion design</li>
                             <li>Design graphique, logos et retouche photo</li>
                             <li>Développement côté client</li>
@@ -493,7 +612,7 @@
                         </p>
                     </div>
                     <div class="detail-mission">
-                        <ul>
+                        <ul class="ul-parcours">
                             <li>Campagnes emailings et Google Ads, création de contenus web, montages vidéos...</li>
                             <li>Création de visuels et publications pour les réseaux sociaux, community management</li>
                             <li>Design du stand Hélicéo et organisation logistique pour le salon Intergéo, plus grand
@@ -505,11 +624,11 @@
                     <div class="title">
                         <h3 class="h3-parcours">MARS - AVRIL 2019</h3>
                         <img class="logo-ese" src="img/logo-portecle.png" alt="Logo Radical Web">
-                        <p><i class="fas fa-briefcase"></i><b>Infographiste / Webdesigner</b>, <span>Radical Web
+                        <p><i class="fas fa-briefcase"></i><b>Infographiste / Webdesigner</b>, <span>MonPorteClef.fr
                                 (Nantes)</span></p>
                     </div>
                     <div class="detail-mission">
-                        <ul>
+                        <ul class="ul-parcours">
                             <li>Réalisation des visuels produits et mise en ligne sous Magento</li>
                             <li>Bannières promotionnelles, habillages de pages</li>
                             <li>Visuels pour les réseaux sociaux</li>
@@ -524,7 +643,7 @@
                                 (Nantes)</span></p>
                     </div>
                     <div class="detail-mission">
-                        <ul>
+                        <ul class="ul-parcours">
                             <li>Refonte graphique de l'identité et du site web d'une école de parapente, intégration
                                 HTML / CSS</li>
                             <li>Création d'un site e-commerce sous Prestashop pour une marque de décoration d'intérieur
@@ -540,7 +659,7 @@
                         <p><i class="fas fa-briefcase"></i><b>Webdesigner</b>, <span>Dinno (Nantes)</span></p>
                     </div>
                     <div class="detail-mission">
-                        <ul>
+                        <ul class="ul-parcours">
                             <li>Refonte graphique du site de l'entreprise</li>
                             <li>Prototypage/maquettage
                             </li>
