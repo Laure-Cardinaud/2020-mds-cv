@@ -15,7 +15,7 @@
         }
 
         body {
-            background-color: #1f1f1f;
+            background-color: #dedede;
             font-family: "futura-light";
             color: #dedede;
             padding: 100px;
@@ -61,7 +61,6 @@
         .container {
             display: grid;
             grid-template-columns: 50% 50%;
-            grid-gap: 10px;
         }
 
         /* fin grille principale */
@@ -77,7 +76,6 @@
             background-position: right;
             background-size: cover;
             padding: 5vh;
-            border: #70cbc6 2px solid;
         }
 
         .bloc-pres {
@@ -106,7 +104,6 @@
             -moz-transition: opacity .2s ease-out;
             -webkit-transition: opacity .2s ease-out;
             -o-transition: opacity .2s ease-out;
-
         }
 
         .button:hover {
@@ -136,15 +133,17 @@
         }
 
         /********************************************************************************************** CSS bloc compétences */
+
         .bloc-competences {
             grid-column: 1/3;
             grid-row: 2/3;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            border: #70cbc6 2px solid;
+            border-bottom: #dedede 1px solid;
+            border-top: #dedede 1px solid;
             padding: 5vh;
-
+            background-color: #1f1f1f;
         }
 
         .bloc-competences img {
@@ -174,19 +173,17 @@
             margin: 10px;
         }
 
-
         /********************************************************************************************** CSS bloc outils */
-
-
 
         .bloc-outils {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            border: #70cbc6 2px solid;
+            border-bottom: #dedede 1px solid;
             grid-column: 1/2;
             grid-row: 3/4;
             padding: 5vh;
+            background-color: #1f1f1f;
         }
 
         .bloc-outil {
@@ -224,13 +221,14 @@
         /********************************************************************************************** CSS bloc Parcours */
 
         .bloc-parcours {
-            border: #70cbc6 2px solid;
+            border-left: #dedede 1px solid;
             grid-column: 2/3;
             grid-row: 3/5;
             padding: 5vh;
             background-image: url('img/redfish.jpg');
             background-repeat: no-repeat;
             background-position: bottom right;
+            background-color: #1f1f1f;
         }
 
         .timeline {
@@ -266,9 +264,9 @@
         /********************************************************************************************** CSS bloc Loisirs */
 
         .bloc-loisirs {
-            border: #70cbc6 2px solid;
             grid-column: 1/2;
             grid-row: 4/5;
+            background-color: #1f1f1f;
         }
 
         .loisirs {
@@ -305,6 +303,12 @@
         .reseaux-milia {
             display: flex;
             flex-direction: row;
+            justify-content: center;
+        }
+
+        .reseau1 {
+            display: flex;
+            flex-direction: row;
             align-items: center;
         }
 
@@ -320,8 +324,17 @@
             padding-left: 1vw;
         }
 
+        .icone-loisirs {
+            width: 6vw;
+        }
 
-
+        @media screen and (max-width: 1600px) {
+            .reseaux-milia {
+                flex-direction: column;
+                align-items: center;
+                line-height: 0.5em;
+            }
+        }
 
 
 
@@ -329,7 +342,7 @@
 
 
         .bloc-footer {
-            border: #70cbc6 2px solid;
+            border-top: #dedede 1px solid;
             grid-column: 1/3;
             grid-row: 5/6;
             display: flex;
@@ -387,53 +400,48 @@
 
 <body>
 
-    <!---------------------------------------------------------------------------------------------------- HTML header -->
-
-    <header>
-        <div class="bloc-pres">
-            <a href="img/photo-laure2.png" target="blank"><img id="photo-cv" src="img/photo-laure2.png" itemprop="image"
-                    alt="Photo de Laure" /></a>
-            <div class="coordonnees" itemscope itemtype="http://schema.org/Person">
-                <h1><span itemprop="name">LAURE CARDINAUD</span></h1>
-                <span class="metier" itemprop="jobTitle">Webdesigner</span>
-                <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="postalCode">44100</span>
-                    <span itemprop="addressLocality">Nantes</span>
-                </div>
-                <a href="mailto:laure.cardinaud@gmail.com" itemprop="email" class="email">
-                    laure.cardinaud@gmail.com</a>
-                <div><a class="button" href="https://laurecardinaud.com/" target="blank" itemprop="url">Visitez mon
-                        portfolio</a>
-                </div>
-            </div>
-        </div>
-
-        <p class="presentation">Je m’appelle Laure et je suis webdesigner à Nantes.
-            Costumière de spectacle dans une vie antérieure, je suis passionnée par le web et par la création au sens
-            large,
-            j’aime m’imprégner des nouveautés et différents courants créatifs, que ce soit pour le web, le graphisme,
-            les
-            arts textiles…<br>
-            <br><b>• Mes appétences :</b> Graphisme, typographie, design UI/UX, motion design…
-            <br><b>• Mes atouts :</b> Créativité, curiosité, organisation, empathie !<br>
-            <br><b>À vos côtés pour une prochaine aventure digitale ?</b>
-        </p>
-    </header>
-
-
-
-
-
-
-
-
 
     <!-------------------------------------------------------------------------------------------- HTML grille principale -->
+
     <div class="container">
 
+        <!---------------------------------------------------------------------------------------------------- HTML header -->
 
+        <header>
+            <div class="bloc-pres">
+                <a href="img/photo-laure2.png" target="blank"><img id="photo-cv" src="img/photo-laure2.png"
+                        itemprop="image" alt="Photo de Laure" /></a>
+                <div class="coordonnees" itemscope itemtype="http://schema.org/Person">
+                    <h1><span itemprop="name">LAURE CARDINAUD</span></h1>
+                    <span class="metier" itemprop="jobTitle">Webdesigner</span>
+                    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="postalCode">44100</span>
+                        <span itemprop="addressLocality">Nantes</span>
+                    </div>
+                    <a href="mailto:laure.cardinaud@gmail.com" itemprop="email" class="email">
+                        laure.cardinaud@gmail.com</a>
+                    <div><a class="button" href="https://laurecardinaud.com/" target="blank" itemprop="url">Visitez mon
+                            portfolio</a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="presentation">Je m’appelle Laure et je suis webdesigner à Nantes.
+                Costumière de spectacle dans une vie antérieure, je suis passionnée par le web et par la création au
+                sens
+                large,
+                j’aime m’imprégner des nouveautés et différents courants créatifs, que ce soit pour le web, le
+                graphisme,
+                les
+                arts textiles…<br>
+                <br><b>• Mes appétences :</b> Graphisme, typographie, design UI/UX, motion design…
+                <br><b>• Mes atouts :</b> Créativité, curiosité, organisation, empathie !<br>
+                <br><b>À vos côtés pour une prochaine aventure digitale ?</b>
+            </p>
+        </header>
 
         <!------------------------------------------------------------------------------------ HTML bloc compétences -->
+
         <div class="bloc-competences">
 
             <div class="titre-bloc">
@@ -466,11 +474,7 @@
             </div>
         </div>
 
-
-
-
         <!------------------------------------------------------------------------------------ HTML bloc outils -->
-
 
         <div class="bloc-outils">
 
@@ -519,8 +523,6 @@
 
         </div>
 
-
-
         <!------------------------------------------------------------------------------------ HTML bloc Loisirs -->
 
         <div class="bloc-loisirs">
@@ -538,25 +540,26 @@
                     </ul>
                 </div>
                 <div class="reseaux-milia">
-                    <a class="icone-rs" href="https://www.etsy.com/fr/shop/MiliaSuspiria" target="_blank">
-                        <img src="img/etsy.png" alt="icone Etsy" /></a>
-                    <p class="reseau">www.etsy.com/fr/shop/MiliaSuspiria</p>
-                    <a class="icone-rs" href="https://www.facebook.com/MiliaSuspiria/" target="_blank">
-                        <img src="img/facebook.png" alt="icone Facebook" /></a>
-                    <p class="reseau">@miliasuspiria</p>
-                    <a class="icone-rs" href="https://www.instagram.com/miliasuspiria/?hl=fr" target="_blank">
-                        <img src="img/instagram2.png" alt="icone Instagram" /></a>
-                    <p class="reseau">@miliasuspiria</p>
+
+                    <div class="reseau1">
+                        <a class="icone-rs" href="https://www.etsy.com/fr/shop/MiliaSuspiria" target="_blank">
+                            <img src="img/etsy.png" alt="icone Etsy" /></a>
+                        <p class="reseau">www.etsy.com/fr/shop/MiliaSuspiria</p>
+                    </div>
+                    <div class="reseau1">
+                        <a class="icone-rs" href="https://www.facebook.com/MiliaSuspiria/" target="_blank">
+                            <img src="img/facebook.png" alt="icone Facebook" /></a>
+                        <p class="reseau">@miliasuspiria</p>
+                    </div>
+                    <div class="reseau1">
+                        <a class="icone-rs" href="https://www.instagram.com/miliasuspiria/?hl=fr" target="_blank">
+                            <img src="img/instagram2.png" alt="icone Instagram" /></a>
+                        <p class="reseau">@miliasuspiria</p>
+                    </div>
                 </div>
             </div>
 
-
-
-
-
-
             <div class="loisirs">
-
                 <div class="loisirs-bloc">
                     <div class="divloisirs">
                         <img class="icone-loisirs" src="img/creation.png" alt="icône graphisme">
@@ -587,16 +590,9 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-            <div class="milia"></div>
         </div>
 
-
         <!------------------------------------------------------------------------------------ HTML bloc Parcours -->
-
 
         <div class="bloc-parcours">
             <h2>PARCOURS</h2>
@@ -633,7 +629,7 @@
                     </div>
                     <div class="detail-mission">
                         <ul class="ul-parcours">
-                            <li>Campagnes emailings et Google Ads, création de contenus web, montages vidéos...</li>
+                            <li>Campagnes emailings et Google Ads, création de contenus web, montages vidéos</li>
                             <li>Création de visuels et publications pour les réseaux sociaux, community management</li>
                             <li>Design du stand Hélicéo et organisation logistique pour le salon Intergéo, plus grand
                                 salon international de la géomesure</li>
@@ -693,11 +689,7 @@
 
         </div>
 
-
-
         <!------------------------------------------------------------------------------------ HTML bloc Footer -->
-
-
 
         <div class="bloc-footer">
             <div class="bloc-gauche-footer">
@@ -733,9 +725,6 @@
 
         </div>
     </div>
-
-
-
 </body>
 
 </html>
