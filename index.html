@@ -129,7 +129,6 @@
 
         .metier {
             font-size: 2em;
-            font-weight: bold;
         }
 
         /********************************************************************************************** CSS bloc compétences */
@@ -258,8 +257,6 @@
         .ul-parcours {
             margin-bottom: 4em;
         }
-
-
 
         /********************************************************************************************** CSS bloc Loisirs */
 
@@ -393,6 +390,12 @@
         .contact a:hover {
             color: #dedede;
         }
+
+        /* protéger son numéro de téléphone des spambots en changeant le sens de lecture : RTL */
+        p.reverse {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
     </style>
 
 
@@ -409,17 +412,18 @@
 
         <header>
             <div class="bloc-pres">
-                <a href="img/photo-laure2.png" target="blank"><img id="photo-cv" src="img/photo-laure2.png"
-                        itemprop="image" alt="Photo de Laure" /></a>
+                <img id="photo-cv" src="img/photo-laure2.png" alt="Photo de Laure" /></a>
                 <div class="coordonnees" itemscope itemtype="http://schema.org/Person">
                     <h1><span itemprop="name">LAURE CARDINAUD</span></h1>
-                    <span class="metier" itemprop="jobTitle">Webdesigner</span>
+                    <span class="metier" itemprop="jobTitle"><b>Webdesigner</b></span>
                     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <span itemprop="postalCode">44100</span>
                         <span itemprop="addressLocality">Nantes</span>
                     </div>
-                    <a href="mailto:laure.cardinaud@gmail.com" itemprop="email" class="email">
-                        laure.cardinaud@gmail.com</a>
+                    <!-- Encoder son adresse mail pour la protéger des spambots : http://www.wbwip.com/wbw/emailencoder.html -->
+                    <a href="mailto:&#108;&#097;&#117;&#114;&#101;&#046;&#099;&#097;&#114;&#100;&#105;&#110;&#097;&#117;&#100;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+                        itemprop="email" class="email">
+                        Contactez-moi !</a>
                     <div><a class="button" href="https://laurecardinaud.com/" target="blank" itemprop="url">Visitez mon
                             portfolio</a>
                     </div>
@@ -712,12 +716,16 @@
                     <div class="contact"><i class="fas fa-map-marker-alt"></i>
                         <p>Nantes</p>
                     </div>
-                    <div class="contact"><i class="fas fa-envelope"></i><a
-                            href="mailto:laure.cardinaud@gmail.com">laure.cardinaud@gmail.com</a><br>
+                    <div class="contact"><i class="fas fa-envelope"></i>
+                        <a
+                            href="mailto:&#108;&#097;&#117;&#114;&#101;&#046;&#099;&#097;&#114;&#100;&#105;&#110;&#097;&#117;&#100;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">Envoyez-moi
+                            un message</a>
+                        <br>
                     </div>
                     <div class="contact">
                         <i class="fas fa-phone-alt"></i>
-                        <p>06 07 65 71 55</p>
+                        <!-- numéro de téléphone inversé pour changement du sens de lecture RTL dans le CSS -->
+                        <p class="reverse">55 17 56 70 60</p>
                     </div>
 
                 </div>
