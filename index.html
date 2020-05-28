@@ -199,10 +199,14 @@
             font-weight: bold;
         }
 
-        progress {
+/***************************************** barres progress */
+
+        progress{
             -webkit-appearance: none;
             appearance: none;
             width: 25vw;
+            background-color: #727272;
+            border: none;
         }
 
         progress::-webkit-progress-bar {
@@ -214,8 +218,13 @@
         }
 
         progress::-moz-progress-bar {
-            color: #70cbc6;
+            background-color: #70cbc6;
         }
+
+        progress::-ms-fill {
+            background-color: #70cbc6;
+        }
+
 
         /********************************************************************************************** CSS bloc Parcours */
 
